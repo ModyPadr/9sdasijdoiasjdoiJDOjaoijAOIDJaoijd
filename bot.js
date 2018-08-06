@@ -11,8 +11,6 @@ const queue = new Map();
 
 const PREFIX = '!';
 
-const developers = ['316324088865882142','408136927259131905','418064523157700609'];
-
 client.on('warn', console.warn);
 
 client.on('error', console.error);
@@ -195,35 +193,7 @@ function play(guild, song) {
 	serverQueue.textChannel.send(`🎶 Start playing: **${song.title}**`);
 }
 
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!developers.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(admin + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.send(`** :heart:  ${argresult}**`)
-  }  else  
-  if (message.content.startsWith(admin + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`** :heart:  ${argresult}**`)
-  } else 
-  if (message.content.startsWith(admin + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`** :heart:  ${argresult}**`)
-  } else 
-  if (message.content.startsWith(admin + 'stream')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.send(`** :heart:  **`)
-  }
-  if (message.content.startsWith(admin + 'setname')) {
-  client.user.setUsername(argresult).then
-      message.channel.send(`Changing The Name To ..**${argresult}** `)
-} else
-if (message.content.startsWith(admin + 'setavatar')) {
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
-}
-});  
+
 
 
 client.login(process.env.BOT_TOKEN);
