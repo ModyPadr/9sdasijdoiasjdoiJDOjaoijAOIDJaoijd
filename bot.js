@@ -11,6 +11,8 @@ const queue = new Map();
 
 const PREFIX = '!';
 
+const developers = ['316324088865882142','408136927259131905','418064523157700609'];
+
 client.on('warn', console.warn);
 
 client.on('error', console.error);
