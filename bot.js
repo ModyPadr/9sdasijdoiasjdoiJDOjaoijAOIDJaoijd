@@ -9,6 +9,8 @@ const youtube = new YouTube(GOOGLE_API_KEY);
 
 const queue = new Map();
 
+const PREFIX = '!';
+
 client.on('warn', console.warn);
 
 client.on('error', console.error);
