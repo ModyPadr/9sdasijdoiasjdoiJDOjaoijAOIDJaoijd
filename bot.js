@@ -18,8 +18,8 @@ const YouTube = require('simple-youtube-api');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const prefix = "!";
-const adminprefix = "#";
-const admin = "#";
+const adminprefix = "!";
+const admin = "!";
 const developers = ["316324088865882142","408136927259131905","418064523157700609"]
 
   
