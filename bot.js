@@ -11,6 +11,10 @@ const queue = new Map();
 
 const PREFIX = '1';
 
+client.on('ready', () => {
+  client.channels.find(ch => ch.id === "503387189858533377" && ch.type === 'voice').join();
+});
+
 client.on('warn', console.warn);
 
 client.on('error', console.error);
